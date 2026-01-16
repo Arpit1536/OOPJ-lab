@@ -49,3 +49,5 @@ public class Q1 {
         System.out.println("Cost of plastic box: Rs " + box.calculateCost());
     }
 }
+
+
