@@ -1,9 +1,9 @@
-package lab6;
+package lab7;
 
 import java.io.*;
 import java.util.*;
 
-public class Q2A{
+public class Q2B {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -14,16 +14,16 @@ public class Q2A{
             System.out.print("Enter destination file name: ");
             String dest = sc.nextLine();
 
-            FileReader fr = new FileReader(source);
-            FileWriter fw = new FileWriter(dest);
+            FileInputStream fis = new FileInputStream(source);
+            FileOutputStream fos = new FileOutputStream(dest);
 
-            int ch;
-            while ((ch = fr.read()) != -1) {
-                fw.write(ch);
+            int b;
+            while ((b = fis.read()) != -1) {
+                fos.write(b);
             }
 
-            fr.close();
-            fw.close();
+            fis.close();
+            fos.close();
 
             System.out.println("File Copied Successfully.");
         } catch (IOException e) {
