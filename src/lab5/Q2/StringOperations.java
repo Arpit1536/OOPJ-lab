@@ -46,7 +46,6 @@ public class StringOperations {
         String sentence = sc.nextLine();
         int vowels = 0, consonants = 0;
         sentence = sentence.toLowerCase();
-
         for (char c : sentence.toCharArray()) {
             if (c >= 'a' && c <= 'z') {
                 if ("aeiou".indexOf(c) != -1)
